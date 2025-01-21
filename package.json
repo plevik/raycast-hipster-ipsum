@@ -3,6 +3,7 @@
   "name": "hipster-ipsum",
   "title": "Hipster ipsum",
   "description": "Generate placeholder content using the official Hipster Ipsum API https://hipsum.co/the-api/",
+  "version": "0.1.0",
   "icon": "paragraph-icon.png",
   "author": "plev",
   "categories": [
