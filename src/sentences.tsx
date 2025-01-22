@@ -1,5 +1,12 @@
-import { Detail } from "@raycast/api";
+import { LaunchProps } from "@raycast/api";
+import { getSentences, produceOutput, showError } from "./utils";
 
-export default function Command() {
-  return <Detail markdown="# Hello World - Sentences" />;
+export default async function SentencesCommand(props?: LaunchProps<{ arguments: Arguments.Sentences }>) {
+  const { error, sentences } = await getSentences(props?.arguments.numberOfSentences);
+
+  if (error) {
+    await showError(error.message);
+  } else {
+    await produceOutput(sentences.join("\n"));
+  }
 }

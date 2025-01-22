@@ -22,8 +22,24 @@ export const getParagraphs = async (numberOfParagraphs?: string) => {
 
     return {error: {message: HIPSTER_IPSUM_API_CONNECTION_ERROR}, paragraphs: []};
   }
+}
 
+export const getSentences = async (numberOfSentences?: string) => {
+  const {type, sentences, startWithLorem} = getPreferenceValues<Preferences>();
+  const sentencesCount = numberOfSentences || sentences || DEFAULT_SENTENCES;
 
+  const fetchUrl = `${HIPSTER_IPSUM_API_BASE_URL}?type=${type}&sentences=${sentencesCount}&start-with-lorem=${startWithLorem ? "1" : "0"}`;
+
+  try {
+    const response = await axios.get(fetchUrl);
+    const sentences = await response.data
+
+    return {error: null, sentences: sentences as string[]};
+  } catch (error) {
+    console.error(`${HIPSTER_IPSUM_API_CONNECTION_ERROR}:`, error);
+
+    return {error: {message: HIPSTER_IPSUM_API_CONNECTION_ERROR}, sentences: []};
+  }
 }
 
 export const showError = async (msg: string) => {
