@@ -7,40 +7,40 @@ export const DEFAULT_PARAGRAPHS = "3";
 export const DEFAULT_SENTENCES = "3";
 
 export const getParagraphs = async (numberOfParagraphs?: string) => {
-  const {type, paras, startWithLorem} = getPreferenceValues<Preferences>();
+  const { type, paras, startWithLorem } = getPreferenceValues<Preferences>();
   const paragraphsCount = numberOfParagraphs || paras || DEFAULT_PARAGRAPHS;
 
   const fetchUrl = `${HIPSTER_IPSUM_API_BASE_URL}?type=${type}&paras=${paragraphsCount}&start-with-lorem=${startWithLorem ? "1" : "0"}`;
 
   try {
     const response = await axios.get(fetchUrl);
-    const paragraphs = await response.data
+    const paragraphs = await response.data;
 
-    return {error: null, paragraphs: paragraphs as string[]};
+    return { error: null, paragraphs: paragraphs as string[] };
   } catch (error) {
     console.error(`${HIPSTER_IPSUM_API_CONNECTION_ERROR}:`, error);
 
-    return {error: {message: HIPSTER_IPSUM_API_CONNECTION_ERROR}, paragraphs: []};
+    return { error: { message: HIPSTER_IPSUM_API_CONNECTION_ERROR }, paragraphs: [] };
   }
-}
+};
 
 export const getSentences = async (numberOfSentences?: string) => {
-  const {type, sentences, startWithLorem} = getPreferenceValues<Preferences>();
+  const { type, sentences, startWithLorem } = getPreferenceValues<Preferences>();
   const sentencesCount = numberOfSentences || sentences || DEFAULT_SENTENCES;
 
   const fetchUrl = `${HIPSTER_IPSUM_API_BASE_URL}?type=${type}&sentences=${sentencesCount}&start-with-lorem=${startWithLorem ? "1" : "0"}`;
 
   try {
     const response = await axios.get(fetchUrl);
-    const sentences = await response.data
+    const sentences = await response.data;
 
-    return {error: null, sentences: sentences as string[]};
+    return { error: null, sentences: sentences as string[] };
   } catch (error) {
     console.error(`${HIPSTER_IPSUM_API_CONNECTION_ERROR}:`, error);
 
-    return {error: {message: HIPSTER_IPSUM_API_CONNECTION_ERROR}, sentences: []};
+    return { error: { message: HIPSTER_IPSUM_API_CONNECTION_ERROR }, sentences: [] };
   }
-}
+};
 
 export const showError = async (msg: string) => {
   await closeMainWindow();

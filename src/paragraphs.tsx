@@ -1,8 +1,5 @@
 import { LaunchProps } from "@raycast/api";
-import {
-  getParagraphs,
-  produceOutput, showError
-} from "./utils";
+import { getParagraphs, produceOutput, showError } from "./utils";
 
 export default async function ParagraphsCommand(props?: LaunchProps<{ arguments: Arguments.Paragraphs }>) {
   const { error, paragraphs } = await getParagraphs(props?.arguments.numberOfParagraphs);
