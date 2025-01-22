@@ -1,10 +1,10 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "hipster-ipsum",
-  "title": "Hipster ipsum",
-  "description": "Generate placeholder content using the official Hipster Ipsum API https://hipsum.co/the-api/",
-  "version": "0.1.0",
-  "icon": "paragraph-icon.png",
+  "title": "Hipster Ipsum",
+  "description": "Generate placeholder content using the official Hipster Ipsum API",
+  "version": "0.1.1",
+  "icon": "hipster-ipsum-icon.png",
   "author": "plev",
   "categories": [
     "Productivity",
@@ -56,7 +56,7 @@
       "title": "Generate Sentences",
       "subtitle": "Hipster Ipsum",
       "description": "Generate random sentences and copy them to the clipboard",
-      "mode": "view",
+      "mode": "no-view",
       "arguments": [
         {
           "name": "numberOfSentences",
@@ -94,7 +94,8 @@
       "name": "type",
       "type": "dropdown",
       "title": "Type",
-      "description": "`hipster-centric` for hipster speak only or `hipster-latin` for hipster speak mixed with Latin words from Lorem ipsum.",
+      "label": "`hipster-centric` for hipster speak only or `hipster-latin` for hipster speak mixed with Latin words from Lorem ipsum.",
+      "description": "“Hipster Centric” for hipster speak only or “Hipster Latin” for hipster speak mixed with Latin words from Lorem ipsum.",
       "data": [
         {
           "value": "hipster-centric",
@@ -112,7 +113,7 @@
       "name": "action",
       "type": "dropdown",
       "title": "Default Action",
-      "description": "What you would like to happen when running the command",
+      "description": "What you would like to happen when running the command?",
       "data": [
         {
           "value": "clipboard",
