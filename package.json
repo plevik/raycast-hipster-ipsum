@@ -3,7 +3,7 @@
   "name": "hipster-ipsum",
   "title": "Hipster Ipsum",
   "description": "Generate placeholder content using the official Hipster Ipsum API",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "icon": "hipster-ipsum-icon.png",
   "author": "plev",
   "categories": [
@@ -27,27 +27,27 @@
             "data": [
                 {
                 "value": "1",
-                "title": "1 paragraph"
+                "title": "1 Paragraph"
                 },
                 {
                 "value": "2",
-                "title": "2 paragraphs"
+                "title": "2 Paragraphs"
                 },
                 {
                 "value": "3",
-                "title": "3 paragraphs"
+                "title": "3 Paragraphs"
                 },
                 {
                 "value": "4",
-                "title": "4 paragraphs"
+                "title": "4 Paragraphs"
                 },
                 {
                 "value": "5",
-                "title": "5 paragraphs"
+                "title": "5 Paragraphs"
                 }
             ],
           "required": false,
-          "placeholder": "No. of paragraphs"
+          "placeholder": "No. of Paragraphs"
         }
       ]
     },
@@ -64,27 +64,27 @@
           "data": [
             {
               "value": "1",
-              "title": "1 sentence"
+              "title": "1 Sentence"
             },
             {
               "value": "2",
-              "title": "2 sentences"
+              "title": "2 Sentences"
             },
             {
               "value": "3",
-              "title": "3 sentences"
+              "title": "3 Sentences"
             },
             {
               "value": "4",
-              "title": "4 sentences"
+              "title": "4 Sentences"
             },
             {
               "value": "5",
-              "title": "5 sentences"
+              "title": "5 Sentences"
             }
           ],
           "required": false,
-          "placeholder": "No. of sentences"
+          "placeholder": "No. of Sentences"
         }
       ]
     }
@@ -134,28 +134,28 @@
     {
       "name": "paras",
       "type": "dropdown",
-      "title": "Default paragraphs",
+      "title": "Default Paragraphs",
       "description": "How many paragraphs you would like to generate by default?",
       "data": [
         {
           "value": "1",
-          "title": "1 paragraph"
+          "title": "1 Paragraph"
         },
         {
           "value": "2",
-          "title": "2 paragraphs"
+          "title": "2 Paragraphs"
         },
         {
           "value": "3",
-          "title": "3 paragraphs"
+          "title": "3 Paragraphs"
         },
         {
           "value": "4",
-          "title": "4 paragraphs"
+          "title": "4 Paragraphs"
         },
         {
           "value": "5",
-          "title": "5 paragraphs"
+          "title": "5 Paragraphs"
         }
       ],
       "default": "3",
@@ -164,28 +164,28 @@
     {
       "name": "sentences",
       "type": "dropdown",
-      "title": "Default sentences",
+      "title": "Default Sentences",
       "description": "How many sentences you would like to generate by default?",
       "data": [
         {
           "value": "1",
-          "title": "1 sentence"
+          "title": "1 Sentence"
         },
         {
           "value": "2",
-          "title": "2 sentences"
+          "title": "2 Sentences"
         },
         {
           "value": "3",
-          "title": "3 sentences"
+          "title": "3 Sentences"
         },
         {
           "value": "4",
-          "title": "4 sentences"
+          "title": "4 Sentences"
         },
         {
           "value": "5",
-          "title": "5 sentences"
+          "title": "5 Sentences"
         }
       ],
       "default": "3",
@@ -194,9 +194,9 @@
     {
       "name": "startWithLorem",
       "type": "checkbox",
-      "title": "Other options",
+      "title": "Other Options",
       "description": "Select to start the first paragraph with the totally fucking ridiculous phrase “I’m baby”",
-      "label": "Start with lorem",
+      "label": "Start with Lorem",
       "default": false,
       "required": false
     }

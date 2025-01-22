@@ -4,13 +4,13 @@ Generate placeholder content using the official [Hipster Ipsum API](https://hips
 
 Inspired by [Lorem Ipsum](https://www.raycast.com/AntonNiklasson/lorem-ipsum) Raycast extension.
 
-## Options
+## Extension Options
 
 - **Paragraphs**: Number of paragraphs to generate. Default is 3.
 - **Sentences**: Number of sentences to generate. Default is 3.
 - **Start with Lorem**: Start the first paragraph with the totally f*ing ridiculous phrase “I’m baby”.
 
-## Commands
+## Extension Commands
 
 - Generate Paragraphs
 - Generate Sentences
