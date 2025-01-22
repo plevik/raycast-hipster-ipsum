@@ -15,15 +15,195 @@
   "license": "MIT",
   "commands": [
     {
-      "name": "generate-placeholder-text",
-      "title": "Generate placeholder text",
-      "description": "Simply generate placeholder text with extension options",
-      "mode": "view"
+      "name": "paragraphs",
+      "title": "Generate Paragraphs",
+      "subtitle": "Hipster Ipsum",
+      "description": "Generate random paragraphs and copy them to the clipboard",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "numberOfParagraphs",
+          "type": "dropdown",
+            "data": [
+                {
+                "value": "1",
+                "title": "1 paragraph"
+                },
+                {
+                "value": "2",
+                "title": "2 paragraphs"
+                },
+                {
+                "value": "3",
+                "title": "3 paragraphs"
+                },
+                {
+                "value": "4",
+                "title": "4 paragraphs"
+                },
+                {
+                "value": "5",
+                "title": "5 paragraphs"
+                }
+            ],
+          "required": false,
+          "placeholder": "No. of paragraphs"
+        }
+      ]
+    },
+    {
+      "name": "sentences",
+      "title": "Generate Sentences",
+      "subtitle": "Hipster Ipsum",
+      "description": "Generate random sentences and copy them to the clipboard",
+      "mode": "view",
+      "arguments": [
+        {
+          "name": "numberOfSentences",
+          "type": "dropdown",
+          "data": [
+            {
+              "value": "1",
+              "title": "1 sentence"
+            },
+            {
+              "value": "2",
+              "title": "2 sentences"
+            },
+            {
+              "value": "3",
+              "title": "3 sentences"
+            },
+            {
+              "value": "4",
+              "title": "4 sentences"
+            },
+            {
+              "value": "5",
+              "title": "5 sentences"
+            }
+          ],
+          "required": false,
+          "placeholder": "No. of sentences"
+        }
+      ]
+    }
+  ],
+  "preferences": [
+    {
+      "name": "type",
+      "type": "dropdown",
+      "title": "Type",
+      "description": "`hipster-centric` for hipster speak only or `hipster-latin` for hipster speak mixed with Latin words from Lorem ipsum.",
+      "data": [
+        {
+          "value": "hipster-centric",
+          "title": "Hipster Centric"
+        },
+        {
+          "value": "hipster-latin",
+          "title": "Hipster Latin"
+        }
+      ],
+      "default": "hipster-centric",
+      "required": true
+    },
+    {
+      "name": "action",
+      "type": "dropdown",
+      "title": "Default Action",
+      "description": "What you would like to happen when running the command",
+      "data": [
+        {
+          "value": "clipboard",
+          "title": "Copy to Clipboard"
+        },
+        {
+          "value": "paste",
+          "title": "Paste to Active App"
+        },
+        {
+          "value": "pasteAndCopy",
+          "title": "Paste and Copy to Clipboard"
+        }
+      ],
+      "default": "clipboard",
+      "required": false
+    },
+    {
+      "name": "paras",
+      "type": "dropdown",
+      "title": "Default paragraphs",
+      "description": "How many paragraphs you would like to generate by default?",
+      "data": [
+        {
+          "value": "1",
+          "title": "1 paragraph"
+        },
+        {
+          "value": "2",
+          "title": "2 paragraphs"
+        },
+        {
+          "value": "3",
+          "title": "3 paragraphs"
+        },
+        {
+          "value": "4",
+          "title": "4 paragraphs"
+        },
+        {
+          "value": "5",
+          "title": "5 paragraphs"
+        }
+      ],
+      "default": "3",
+      "required": false
+    },
+    {
+      "name": "sentences",
+      "type": "dropdown",
+      "title": "Default sentences",
+      "description": "How many sentences you would like to generate by default?",
+      "data": [
+        {
+          "value": "1",
+          "title": "1 sentence"
+        },
+        {
+          "value": "2",
+          "title": "2 sentences"
+        },
+        {
+          "value": "3",
+          "title": "3 sentences"
+        },
+        {
+          "value": "4",
+          "title": "4 sentences"
+        },
+        {
+          "value": "5",
+          "title": "5 sentences"
+        }
+      ],
+      "default": "3",
+      "required": false
+    },
+    {
+      "name": "startWithLorem",
+      "type": "checkbox",
+      "title": "Other options",
+      "description": "Select to start the first paragraph with the totally fucking ridiculous phrase “I’m baby”",
+      "label": "Start with lorem",
+      "default": false,
+      "required": false
     }
   ],
   "dependencies": {
     "@raycast/api": "^1.89.0",
-    "@raycast/utils": "^1.17.0"
+    "@raycast/utils": "^1.17.0",
+    "axios": "^1.7.9"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^1.0.11",
